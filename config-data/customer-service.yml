@@ -21,3 +21,9 @@ spring:
 # Server configuration
 server:
   port: 8081
+
+# Eureka congifuration
+eureka:
+  client:
+    serviceUrl:
+      defaltZone: http://localhost:8099/eureka/
