@@ -1,0 +1,31 @@
+version: '3.8'
+
+services: 
+
+    pgadmin4:
+        image: dpage/pgadmin4
+        container_name: pgadmin4_microservice
+        environment: 
+            - PGADMIN_DEFAULT_EMAIL=teste@gmail.com
+            - PGADMIN_DEFAULT_PASSWORD=12345
+        ports: 
+            - "80:80"
+        networks: 
+            - postgres-network
+  
+    postgres:
+        image: postgres:10
+        container_name: postgres_microservice
+        environment: 
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_MULTIPLE_DATABASES= postgres
+        ports: 
+            - "5432:5432"
+        networks: 
+            - postgres-network 
+        volumes: 
+            - /home/kaminski/Developer/SpringBoot/microservice-store/data/postgres:/var/lib/postgresql/data
+
+networks: 
+    postgres-network:
+        driver: bridge
