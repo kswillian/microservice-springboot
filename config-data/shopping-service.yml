@@ -21,3 +21,19 @@ spring:
 # Server configuration
 server:
   port: 8083
+
+# Eureka congifuration
+eureka:
+  client:
+    serviceUrl:
+      defaltZone: http://localhost:8761/eureka/
+
+Feing:
+  hystrix:
+    enabled: true
+
+managment:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
