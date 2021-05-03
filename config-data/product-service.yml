@@ -21,6 +21,9 @@ spring:
 # Server configuration
 server:
   port: 8082
+  error:
+    include-message: always
+    include-binding-errors: always
 
 # Eureka configuration
 eureka:
