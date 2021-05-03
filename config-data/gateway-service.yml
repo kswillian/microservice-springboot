@@ -2,7 +2,7 @@
 server:
   port: 8084
 
-# Eureka congifuration
+# Eureka configuration
 eureka:
   client:
     serviceUrl:
