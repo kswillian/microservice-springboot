@@ -33,6 +33,9 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix:2.2.2.RELEASE'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard:2.2.2.RELEASE'
+
+	compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.2.1'
+	
 	//implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
